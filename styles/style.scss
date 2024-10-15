@@ -1,0 +1,119 @@
+@import "./reset.scss";
+
+body {
+  background-color: #dce6d1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.phone {
+  background-color: black;
+  border-radius: 50px;
+  height: 95%;
+  width: 420px;
+  padding: 50px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  overflow-x: scroll;
+  scrollbar-width: thin;
+  height: max-content;
+  .header__list {
+    display: flex;
+    gap: 10px;
+    color: white;
+    width: max-content;
+
+    .header__list-item {
+      border: 1px solid rgba($color: #fff, $alpha: 0.5);
+      padding: 10px;
+      border-radius: 20px;
+    }
+
+    .header__list-item__inverted {
+      background-color: white;
+      color: black;
+    }
+  }
+}
+
+.cards {
+  margin: 20px 0px;
+  display: grid;
+  flex: 1;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 10px;
+
+  .cards__card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .card__title {
+      font-size: 28px;
+    }
+
+    .card__footer {
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      span {
+        padding: 5px 10px;
+        border-radius: 20px;
+        border: 1px solid black;
+      }
+
+      .price {
+        background-color: #ffdd2c;
+      }
+
+      .length {
+        background-color: white;
+      }
+    }
+
+    &:first-child {
+      background-color: #292d33;
+      border: 1px solid white;
+
+      .card__title {
+        color: white;
+      }
+    }
+
+    &:nth-child(2) {
+      background-color: #f6f4f1;
+    }
+
+    &:nth-child(3) {
+      background-color: #f9fdbd;
+    }
+
+    &:nth-child(4) {
+      background-color: #b5a3f7;
+    }
+
+    &:nth-child(5) {
+      background-color: #ffd4d4;
+    }
+
+    &:last-child {
+      background-color: #d1ffde;
+    }
+
+    &:nth-child(3n) {
+      grid-column: span 2;
+    }
+  }
+}
